@@ -42,7 +42,7 @@ dependencies = [
     "scipy",
     "seaborn",
     "svgutils >= 0.3.4",
-    "templateflow@git+https://github.com/bendhouseart/python-client",
+    "templateflow@git+https://github.com/bendhouseart/python-client#egg=fix/zip-extract-race-condition",
     "traits < 6.4",
     "transforms3d",
 ]
