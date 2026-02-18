@@ -3,7 +3,7 @@
 
 def test_BIDSURI():
     """Test the BIDSURI interface."""
-    from fmriprep.interfaces.bids import BIDSURI
+    from niworkflows.interfaces.bids import BIDSURI
 
     dataset_links = {
         'raw': '/data',
