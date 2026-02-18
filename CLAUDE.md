@@ -477,7 +477,7 @@ These are designed for inline use in Nipype connections:
 Primary CI pipeline:
 - **build**: builds sdist/wheel, checks with twine
 - **get_data**: fetches test data via DataLad (cached)
-- **test**: matrix of Python 3.10-3.14 x {min, latest, pre} deps
+- **test**: matrix of Python 3.12-3.14 x {min, latest, pre} deps
 - **checks**: ruff style + codespell
 
 ### CircleCI (`.circleci/config.yml`)
@@ -536,7 +536,7 @@ automatically.
 - **Build backend**: hatchling with hatch-vcs (version from git tags)
 - **Version scheme**: release-branch-semver
 - **Version file**: `niworkflows/_version.py` (auto-generated, do not edit)
-- **Python support**: >= 3.10
+- **Python support**: >= 3.12
 
 ## Git conventions
 
