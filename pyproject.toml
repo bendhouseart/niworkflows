@@ -207,14 +207,18 @@ branch = true
 parallel = true
 omit = [
     "*/_version.py",
+    "*/conftest.py",
     "*/test/*",
     "*/tests/*",
+    "niworkflows/testing.py",
 ]
 
 [tool.coverage.report]
 omit = [
+    "*/conftest.py",
     "*/test/*",
     "*/tests/*",
+    "niworkflows/testing.py",
 ]
 # Regexes for lines to exclude from consideration
 exclude_lines = [
