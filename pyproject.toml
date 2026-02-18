@@ -207,9 +207,15 @@ branch = true
 parallel = true
 omit = [
     "*/_version.py",
+    "*/test/*",
+    "*/tests/*",
 ]
 
 [tool.coverage.report]
+omit = [
+    "*/test/*",
+    "*/tests/*",
+]
 # Regexes for lines to exclude from consideration
 exclude_lines = [
     "raise NotImplementedError",
