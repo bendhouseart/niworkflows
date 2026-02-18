@@ -2,10 +2,10 @@ name: Tox
 
 on:
   push:
-    branches: [ '**' ]
+    branches: [ master, main, 'maint/*' ]
     tags: [ '*' ]
   pull_request:
-    branches: [ master, main, 'maint/*' ]
+
   schedule:
     - cron: '0 0 * * *'
 
