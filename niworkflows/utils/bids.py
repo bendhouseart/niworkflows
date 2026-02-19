@@ -572,14 +572,10 @@ def _find_nearest_path(path_dict, input_path):
         return input_path
 
     input_path = Path(input_path)
-    matching_path = None
+    matching_path = []
     for key, path in path_dict.items():
         if input_path.is_relative_to(path):
             relative_path = input_path.relative_to(path)
-            if (matching_path is None) or (len(relative_path.parts) < len(matching_path.parts)):
-                matching_key = key
-                matching_path = relative_path
+            matching_path.append((len(relative_path.parts), f'{key}{relative_path}'))
 
-    return (
-        str(input_path.absolute()) if matching_path is None else f'{matching_key}{matching_path}'
-    )
+    return str(input_path.absolute()) if not matching_path else sorted(matching_path)[0][1]
