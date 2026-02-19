@@ -580,5 +580,3 @@ def _find_nearest_path(path_dict, input_path):
     return (
         str(input_path.absolute()) if matching_path is None else f'{matching_key}{matching_path}'
     )
-
-    return matching_path
