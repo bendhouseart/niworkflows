@@ -1506,10 +1506,7 @@ class BIDSURI(SimpleInterface):
     def __init__(self, numinputs=0, **inputs):
         super().__init__(**inputs)
         self._numinputs = numinputs
-        if numinputs >= 1:
-            input_names = [f'in{i + 1}' for i in range(numinputs)]
-        else:
-            input_names = []
+        input_names = [f'in{i + 1}' for i in range(numinputs)]
         add_traits(self.inputs, input_names)
 
     def _run_interface(self, runtime):
